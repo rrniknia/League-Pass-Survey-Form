@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NBA League Pass Survey Form</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="images/nbalogo.png" id="nbalogo">
+            <h1 id="title">NBA League Pass Survey</h1>
+        </header>
+        <div id="container">
+            <div id="formcontainer">
+            <p id="description">The following is a feedback form used to improve user experience for NBA League Pass. Your input will be used to make League Pass a better product in the near future.</p>
+            <form id="survey-form" action="connect.php" method="POST">
+        
+                <label id="name-label" for="fullName">Name</label>
+                <div class="formbox">
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your name here" class="bar" >
+                </div>
+
+                <label id="email-label" for="email">Email</label>
+                <div class="formbox">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address here" class="bar">
+                </div>    
+
+                <label id="gender-label" for="genderdiv">Gender</label>
+                <div id="genderdiv" class="formbox choicebox">
+                    <input type="radio" id="male" name="gender" value="M">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="F">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="O">
+                    <label for="other">Other</label>
+                </div>
+
+                <label id="number-label" for="number">Age</label>
+                <div class="formbox">
+                    <input type="number" id="number" name="age" min="1" max="99" class="bar">
+                </div>
+
+                <label id="dropdown-label" for="dropdown">What's your favorite NBA Atlantic Division team?</label>
+                <div class="formbox">
+                    <select id="dropdown" class="bar" name="faveTeam">
+                        <option value="" disabled selected>Choose your team</option>
+                        <option value="celtics">Boston Celtics</option>
+                        <option value="nets">Brooklyn Nets</option>
+                        <option value="knickerbockers">New York Knicks</option>
+                        <option value="76ers">Philadelphia 76ers</option>
+                        <option value="raptors">Toronto Raptors</option> 
+                    </select>
+                </div>
+
+                <label for="gamesdiv" id="radio-label">How many NBA games do you watch per week?</label>
+                <div id="gamesdiv" class="formbox choicebox">
+                    <input type="radio" id="0" name="games" value="0">
+                    <label for="0">0</label>
+                    <input type="radio" id="1-3" name="games" value="1-3">
+                    <label for="1-3">1-3</label>
+                    <input type="radio" id="4-6" name="games" value="4-6">
+                    <label for="4-6">4-6</label>
+                    <input type="radio" id="7+" name="games" value="7+">
+                    <label for="7+">7+</label>
+                </div>
+
+                <label for="playoffsdiv" id="playoffsdiv-label">Choose your favorite playoff teams (Check all that apply)</label>
+                <div id="playoffsdiv">
+                    <div id="eastteams" class="formbox choicebox">
+                        <input type="checkbox" id="76ers" name="playoffs" value="76ers">
+                        <label for="76ers">Philadelphia 76ers</label>
+                        <input type="checkbox" id="nets" name="playoffs" value="nets">
+                        <label for="nets">Brooklyn Nets</label>
+                        <input type="checkbox" id="bucks" name="playoffs" value="bucks">
+                        <label for="bucks">Milwaukee Bucks</label>
+                        <input type="checkbox" id="knickerbockers" name="playoffs" value="knickerbockers">
+                        <label for="knickerbockers">New York Knicks</label>
+                        <input type="checkbox" id="hawks" name="playoffs" value="hawks">
+                        <label for="hawks">Atlanta Hawks</label>
+                        <input type="checkbox" id="heat" name="playoffs" value="heat">
+                        <label for="heat">Miami Heat</label>
+                        <input type="checkbox" id="celtics" name="playoffs" value="celtics">
+                        <label for="celtics">Boston Celtics</label>
+                        <input type="checkbox" id="wizards" name="playoffs" value="wizards">
+                        <label for="wizards">Washington Wizards</label>
+                    </div>
+
+                    <div id="westteams" class="formbox choicebox">
+                        <input type="checkbox" id="jazz" name="playoffs" value="jazz">
+                        <label for="jazz">Utah Jazz</label>
+                        <input type="checkbox" id="suns" name="playoffs" value="suns">
+                        <label for="suns">Phoenix Suns</label>
+                        <input type="checkbox" id="nuggets" name="playoffs" value="nuggets">
+                        <label for="nuggets">Denver Nuggets</label>
+                        <input type="checkbox" id="clippers" name="playoffs" value="clippers">
+                        <label for="clippers">Los Angeles Clippers</label>
+                        <input type="checkbox" id="mavericks" name="playoffs" value="mavericks">
+                        <label for="mavericks">Dallas Mavericks</label>
+                        <input type="checkbox" id="trailblazers" name="playoffs" value="trailblazers">
+                        <label for="trailblazers">Portland Trail Blazers</label>
+                        <input type="checkbox" id="lakers" name="playoffs" value="lakers">
+                        <label for="lakers">Los Angeles Lakers</label>
+                        <input type="checkbox" id="grizzlies" name="playoffs" value="grizzlies">
+                        <label for="grizzlies">Memphis Grizzlies</label>
+                    </div>
+                </div>
+                
+                <label for="comments">Any additional comments or questions?</label>
+                <div class="formbox">
+                    <textarea id="comments" name="comments" class="bar" maxlength="200" placeholder="Enter comments or questions here..."></textarea>
+                </div>
+
+                <input id="submit" type="submit" value="Submit Form">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Ryan Niknia</p>
+    </footer>
+    </body>
+</html>
